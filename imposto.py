@@ -1,17 +1,25 @@
-salário = float(input("Digite o salário para cálculo do imposto (Ex.: 2500.00): "))
+salario = float(input("Digite o salário para cálculo do imposto (Ex.: 2500.00): "))
+ir=0
 
+if salario <=1903.98:
+    print ("Insento de imposto")
 
-if salário >1903.98 and salário <=2826.65:
-    imposto= (salário / 100) * 7.5 
-      
-if salário >2826.66 and salário <=3751.05:
-    imposto= (salário / 100) * 15 
+elif salario  >1903.98 and salario <=2826.65:
+    imposto= (salario/100)*7.5 
+    ir =salario-imposto
+    print ("Imposto é de 7.5%, seu salário com desconto é", ir)
 
-if salário >3751.06 and salário <=4664.68:
-    imposto= (salário / 100) * 22.5 
+elif salario >=2826.65 and salario <=3751.05:
+    imposto= (salario*0.15)
+    ir =salario-imposto
+    print ("Imposto é de 15%, seu salário com desconto é", ir)    
 
-if salário >=4664.68:
-    imposto= (salário / 100) * 27.5 
+elif salario >=3751.05 and salario <=4664.68:
+    imposto= (salario*0.225)
+    ir =salario-imposto
+    print ("Imposto é de 22,5%, , seu salário com desconto é", ir)
 
-print(salário)
-print(imposto)
+elif salario >=4664.68:
+    imposto= (salario *0.275) 
+    ir =salario-imposto
+    print ("Imposto é de 27,5%, seu salário com desconto é", ir)
