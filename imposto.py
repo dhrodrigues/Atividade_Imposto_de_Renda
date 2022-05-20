@@ -5,7 +5,7 @@ if salario <=1903.98:
     print ("Insento de imposto")
 
 elif salario  >1903.98 and salario <=2826.65:
-    imposto= (salario/100)*7.5 
+    imposto= (salario*0.075)*7.5 
     ir =salario-imposto
     print ("Imposto é de 7.5%, seu salário com desconto é", ir)
 
